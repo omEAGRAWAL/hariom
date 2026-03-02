@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vivid Walls — Emerald Geometric</title>
+    <meta name="description"
+        content="Emerald Geometric wallpaper — Art Deco inspired geometric pattern with rich emerald tones and metallic gold accents. $125 per roll.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d473",
+                        "primary-dark": "#0eba63",
+                        "bg-light": "#f6f8f7",
+                        "neutral-light": "#e8edeb",
+                        "text-primary": "#111814",
+                        "text-secondary": "#618975",
+                    },
+                    fontFamily: { "display": ["Manrope", "sans-serif"] },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            min-height: 100dvh;
+        }
+
+        .thumb-active {
+            border-color: #11d473 !important;
+            opacity: 1 !important;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.5s ease-out forwards;
+        }
+
+        .quantity-btn {
+            user-select: none;
+        }
+
+        .quantity-btn:active {
+            transform: scale(0.92);
+        }
+    </style>
+</head>
+
+<body class="bg-bg-light font-display text-slate-900 antialiased overflow-x-hidden">
+    <div class="relative flex h-auto min-h-screen w-full flex-col max-w-[1440px] mx-auto">
+
+        <!-- Header -->
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between bg-white/90 backdrop-blur-md p-4 border-b border-neutral-light">
+            <a href="catalog.html"
+                class="flex size-10 items-center justify-center rounded-full bg-neutral-light hover:bg-neutral-light/80 text-text-primary transition-colors">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </a>
+            <h1 class="text-base font-bold tracking-tight">Vivid Walls</h1>
+            <div class="flex gap-2">
+                <button
+                    class="flex size-10 items-center justify-center rounded-full hover:bg-neutral-light text-text-primary transition-colors"
+                    id="fav-btn" onclick="toggleFav()">
+                    <span class="material-symbols-outlined">favorite</span>
+                </button>
+                <a href="catalog.html"
+                    class="flex size-10 items-center justify-center rounded-full hover:bg-neutral-light text-text-primary transition-colors">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </a>
+            </div>
+        </header>
+
+        <main class="flex-1 pb-28">
+            <!-- Room Visualizer -->
+            <div class="relative w-full h-[45vh] md:h-[55vh] bg-slate-200 overflow-hidden">
+                <div class="absolute inset-0 bg-cover bg-center transition-all duration-700" id="main-image"
+                    style="background-image: url('images/hero_room.png');">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-bg-light via-transparent to-transparent opacity-60">
+                    </div>
+                </div>
+                <div class="absolute bottom-6 left-4 right-4 flex items-center justify-between">
+                    <div
+                        class="bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-2 shadow-sm">
+                        <span class="material-symbols-outlined text-primary text-sm filled">visibility</span>
+                        <span class="text-xs font-semibold">Live Preview Active</span>
+                    </div>
+                    <button
+                        class="bg-white p-2 rounded-full shadow-lg text-text-primary hover:scale-105 transition-transform">
+                        <span class="material-symbols-outlined">center_focus_strong</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Info Card -->
+            <div class="px-4 md:px-6 -mt-6 relative z-10 fade-up">
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-neutral-light">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <span class="text-xs font-bold text-primary uppercase tracking-wider mb-1 block">Art Deco
+                                Collection</span>
+                            <h2 class="text-2xl font-bold leading-tight text-text-primary">Emerald Geometric</h2>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xl font-bold text-text-primary">$125</p>
+                            <p class="text-xs text-text-secondary">per roll</p>
+                        </div>
+                    </div>
+                    <!-- Stars -->
+                    <div class="flex items-center gap-1 text-yellow-400 text-sm mb-4">
+                        <span class="material-symbols-outlined text-sm filled">star</span>
+                        <span class="material-symbols-outlined text-sm filled">star</span>
+                        <span class="material-symbols-outlined text-sm filled">star</span>
+                        <span class="material-symbols-outlined text-sm filled">star</span>
+                        <span class="material-symbols-outlined text-sm text-slate-300">star</span>
+                        <span class="text-text-secondary ml-1 text-xs">(42 reviews)</span>
+                    </div>
+                    <!-- Texture Thumbnails -->
+                    <h3 class="text-sm font-semibold mb-3 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-lg">zoom_in</span>
+                        Texture Detail
+                    </h3>
+                    <div class="flex gap-3 overflow-x-auto pb-2">
+                        <button
+                            class="shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 border-primary cursor-pointer thumb-active"
+                            onclick="switchImage(this, 'images/hero_room.png')">
+                            <div class="w-full h-full bg-cover bg-center"
+                                style="background-image: url('images/hero_room.png');"></div>
+                        </button>
+                        <button
+                            class="shrink-0 w-20 h-20 rounded-lg overflow-hidden border border-neutral-light opacity-60 hover:opacity-100 transition-opacity cursor-pointer"
+                            onclick="switchImage(this, 'images/emerald_geometric.png')">
+                            <div class="w-full h-full bg-cover bg-center"
+                                style="background-image: url('images/emerald_geometric.png');"></div>
+                        </button>
+                        <button
+                            class="shrink-0 w-20 h-20 rounded-lg overflow-hidden border border-neutral-light opacity-60 hover:opacity-100 transition-opacity cursor-pointer"
+                            onclick="switchImage(this, 'images/golden_damask.png')">
+                            <div class="w-full h-full bg-cover bg-center"
+                                style="background-image: url('images/golden_damask.png');"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specifications -->
+            <div class="px-4 md:px-6 mt-6">
+                <h3 class="text-lg font-bold mb-4">Specifications</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white p-4 rounded-xl border border-neutral-light flex flex-col gap-2">
+                        <span class="material-symbols-outlined text-primary">straighten</span>
+                        <div>
+                            <p class="text-xs text-text-secondary">Roll Size</p>
+                            <p class="font-semibold text-sm">10m x 53cm</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-neutral-light flex flex-col gap-2">
+                        <span class="material-symbols-outlined text-primary">layers</span>
+                        <div>
+                            <p class="text-xs text-text-secondary">Material</p>
+                            <p class="font-semibold text-sm">Non-Woven</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-neutral-light flex flex-col gap-2">
+                        <span class="material-symbols-outlined text-primary">water_drop</span>
+                        <div>
+                            <p class="text-xs text-text-secondary">Washability</p>
+                            <p class="font-semibold text-sm">Extra Washable</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-neutral-light flex flex-col gap-2">
+                        <span class="material-symbols-outlined text-primary">content_copy</span>
+                        <div>
+                            <p class="text-xs text-text-secondary">Pattern Repeat</p>
+                            <p class="font-semibold text-sm">64cm Straight</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="px-4 md:px-6 mt-8">
+                <h3 class="text-lg font-bold mb-2">About this design</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">
+                    Elevate your space with this striking Art Deco-inspired geometric pattern. Featuring rich emerald
+                    tones accented with metallic gold lines, this wallpaper brings a touch of roaring twenties glamour
+                    to modern interiors. Perfect for feature walls in living areas or bedrooms.
+                </p>
+            </div>
+
+            <!-- Quantity Selector -->
+            <div class="px-4 md:px-6 mt-8">
+                <h3 class="text-sm font-semibold mb-3">Quantity (rolls)</h3>
+                <div class="flex items-center gap-4 mb-6">
+                    <button
+                        class="quantity-btn size-10 rounded-full bg-neutral-light flex items-center justify-center text-text-primary font-bold text-lg hover:bg-primary hover:text-text-primary transition-colors"
+                        onclick="changeQty(-1)">−</button>
+                    <span class="text-xl font-bold w-8 text-center" id="qty">1</span>
+                    <button
+                        class="quantity-btn size-10 rounded-full bg-neutral-light flex items-center justify-center text-text-primary font-bold text-lg hover:bg-primary hover:text-text-primary transition-colors"
+                        onclick="changeQty(1)">+</button>
+                    <span class="text-text-secondary text-sm ml-2">Total: <span class="font-bold text-text-primary"
+                            id="total-price">$125</span></span>
+                </div>
+            </div>
+
+            <!-- Sample & Cart Actions -->
+            <div class="px-4 md:px-6 mt-2 mb-4">
+                <div class="flex items-center gap-4 mb-4 bg-primary/10 p-4 rounded-xl border border-primary/20">
+                    <div class="size-10 rounded-full bg-white flex items-center justify-center shrink-0 text-primary">
+                        <span class="material-symbols-outlined">style</span>
+                    </div>
+                    <div class="flex-1">
+                        <p class="font-bold text-text-primary text-sm">Not sure about the color?</p>
+                        <p class="text-xs text-text-secondary">Order a sample to see it in your light.</p>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <button
+                        class="flex-1 bg-white border-2 border-neutral-light text-text-primary font-bold h-14 rounded-xl flex items-center justify-center gap-2 hover:border-primary transition-colors">
+                        Request Sample
+                    </button>
+                    <button
+                        class="flex-[2] bg-primary text-white font-bold h-14 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20 hover:bg-primary-dark transition-colors"
+                        onclick="addToCart()">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        Add to Cart
+                    </button>
+                </div>
+                <p class="text-center text-xs text-text-secondary mt-3 flex items-center justify-center gap-1">
+                    <span class="material-symbols-outlined text-sm">local_shipping</span>
+                    Free shipping on orders over $150
+                </p>
+            </div>
+
+            <!-- Similar Products -->
+            <div class="px-4 md:px-6 mt-6">
+                <h3 class="text-lg font-bold mb-4">You Might Also Like</h3>
+                <div class="flex gap-4 overflow-x-auto pb-4">
+                    <a href="details.html" class="shrink-0 w-40">
+                        <div class="aspect-square rounded-xl bg-cover bg-center mb-2 shadow-sm"
+                            style="background-image: url('images/golden_damask.png');"></div>
+                        <p class="font-bold text-sm">Golden Damask</p>
+                        <p class="text-primary text-sm font-semibold">$120</p>
+                    </a>
+                    <a href="details.html" class="shrink-0 w-40">
+                        <div class="aspect-square rounded-xl bg-cover bg-center mb-2 shadow-sm"
+                            style="background-image: url('images/midnight_rose.png');"></div>
+                        <p class="font-bold text-sm">Midnight Rose</p>
+                        <p class="text-primary text-sm font-semibold">$95</p>
+                    </a>
+                    <a href="details.html" class="shrink-0 w-40">
+                        <div class="aspect-square rounded-xl bg-cover bg-center mb-2 shadow-sm"
+                            style="background-image: url('images/botanical_bliss.png');"></div>
+                        <p class="font-bold text-sm">Botanical Bliss</p>
+                        <p class="text-primary text-sm font-semibold">$110</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <div
+            class="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-neutral-light px-4 pb-6 pt-2 z-50">
+            <div class="flex justify-between items-end max-w-[1440px] mx-auto">
+                <a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary hover:text-text-primary transition-colors"
+                    href="index.html">
+                    <span class="material-symbols-outlined text-2xl">home</span>
+                    <span class="text-[10px] font-medium">Home</span>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="catalog.html">
+                    <span class="material-symbols-outlined text-2xl filled">category</span>
+                    <span class="text-[10px] font-medium">Collections</span>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary" href="details.html">
+                    <div
+                        class="size-12 -mt-8 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/30 border-4 border-white">
+                        <span class="material-symbols-outlined text-white text-2xl">view_in_ar</span>
+                    </div>
+                    <span class="text-[10px] font-medium">Visualizer</span>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary hover:text-primary transition-colors"
+                    href="catalog.html">
+                    <span class="material-symbols-outlined text-2xl">favorite</span>
+                    <span class="text-[10px] font-medium">Saved</span>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary hover:text-primary transition-colors"
+                    href="showroom.html">
+                    <span class="material-symbols-outlined text-2xl">storefront</span>
+                    <span class="text-[10px] font-medium">Showroom</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchImage(btn, src) {
+            document.querySelectorAll('[onclick^="switchImage"]').forEach(b => {
+                b.classList.remove('thumb-active', 'border-primary');
+                b.classList.add('border-neutral-light', 'opacity-60');
+                b.style.borderWidth = '1px';
+            });
+            btn.classList.add('thumb-active');
+            btn.classList.remove('opacity-60');
+            btn.style.borderWidth = '2px';
+            btn.style.borderColor = '#11d473';
+            document.getElementById('main-image').style.backgroundImage = `url('${src}')`;
+        }
+
+        let qty = 1;
+        function changeQty(d) {
+            qty = Math.max(1, qty + d);
+            document.getElementById('qty').textContent = qty;
+            document.getElementById('total-price').textContent = '$' + (125 * qty);
+        }
+
+        function toggleFav() {
+            const btn = document.getElementById('fav-btn');
+            const icon = btn.querySelector('.material-symbols-outlined');
+            icon.classList.toggle('filled');
+            icon.classList.toggle('text-red-500');
+        }
+
+        function addToCart() {
+            const btn = event.target.closest('button');
+            const original = btn.innerHTML;
+            btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Added!';
+            btn.classList.add('bg-primary-dark');
+            setTimeout(() => { btn.innerHTML = original; btn.classList.remove('bg-primary-dark'); }, 1500);
+        }
+    </script>
+</body>
+
+</html>

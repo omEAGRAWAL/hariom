@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vivid Walls — Premium Wallpapers</title>
+    <meta name="description"
+        content="Discover our curated selection of premium wallpapers designed to elevate your home. Transform your space with Vivid Walls.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d473",
+                        "primary-dark": "#0eba63",
+                        "bg-light": "#f6f8f7",
+                        "bg-dark": "#102219",
+                        "neutral-light": "#e8edeb",
+                        "text-primary": "#111814",
+                        "text-secondary": "#618975",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Smooth page transitions */
+        body {
+            min-height: 100dvh;
+        }
+
+        /* Animated gradient on hero */
+        @keyframes shimmer {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .hero-shimmer::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, transparent 30%, rgba(17, 212, 115, 0.08) 50%, transparent 70%);
+            background-size: 200% 100%;
+            animation: shimmer 4s ease-in-out infinite;
+        }
+
+        /* Fade in animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.6s ease-out forwards;
+        }
+
+        .fade-up-delay-1 {
+            animation-delay: 0.1s;
+            opacity: 0;
+        }
+
+        .fade-up-delay-2 {
+            animation-delay: 0.2s;
+            opacity: 0;
+        }
+
+        .fade-up-delay-3 {
+            animation-delay: 0.3s;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body class="bg-bg-light font-display antialiased">
+    <div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-[1440px] mx-auto">
+
+        <!-- Top Bar -->
+        <div
+            class="flex flex-col gap-2 bg-white/80 backdrop-blur-md p-4 pb-2 sticky top-0 z-50 border-b border-neutral-light">
+            <div class="flex items-center h-12 justify-between">
+                <button
+                    class="text-text-primary flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-neutral-light transition-colors"
+                    id="menu-btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <div class="flex items-center gap-2">
+                    <button
+                        class="flex size-12 items-center justify-center rounded-full hover:bg-neutral-light transition-colors text-text-primary">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                    <a href="catalog.html"
+                        class="flex size-12 items-center justify-center rounded-full hover:bg-neutral-light transition-colors text-text-primary">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                    </a>
+                </div>
+            </div>
+            <p class="text-text-primary tracking-tight text-[28px] font-extrabold leading-tight">Vivid Walls</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 pb-24">
+
+            <!-- Hero Section -->
+            <div class="p-4">
+                <div class="bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-2xl min-h-[420px] md:min-h-[520px] shadow-lg relative group hero-shimmer"
+                    style='background-image: linear-gradient(0deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.05) 100%), url("images/hero_room.png");'>
+                    <div class="flex flex-col p-6 md:p-10 gap-4 z-10 fade-up">
+                        <h1
+                            class="text-white tracking-tight text-4xl md:text-5xl font-bold leading-tight drop-shadow-md">
+                            Transform Your<br>Space</h1>
+                        <p class="text-white/90 text-sm md:text-base font-medium leading-relaxed max-w-[400px]">Discover
+                            our curated selection of premium wallpapers designed to elevate your home.</p>
+                        <div class="pt-2 flex gap-3">
+                            <a href="catalog.html"
+                                class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-primary hover:bg-primary-dark text-text-primary text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/30 transition-all hover:scale-[1.02] active:scale-[0.98]">
+                                <span class="truncate">Browse Collection</span>
+                            </a>
+                            <a href="showroom.html"
+                                class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white text-base font-bold leading-normal tracking-[0.015em] border border-white/30 transition-all hover:scale-[1.02] active:scale-[0.98]">
+                                <span class="truncate">Visit Showroom</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Collections -->
+            <div class="flex items-center justify-between px-4 pt-8 pb-4 fade-up fade-up-delay-1">
+                <h3 class="text-text-primary tracking-tight text-xl font-bold leading-tight">Featured Collections</h3>
+                <a class="text-primary text-sm font-semibold hover:underline" href="catalog.html">See All</a>
+            </div>
+            <div class="flex overflow-x-auto gap-4 px-4 pb-4 snap-x hide-scrollbar fade-up fade-up-delay-2">
+                <!-- Card 1 - Minimalist Textures -->
+                <a href="catalog.html" class="flex-none w-64 md:w-72 snap-center">
+                    <div class="flex flex-col gap-3 group cursor-pointer">
+                        <div class="w-full h-80 rounded-xl bg-cover bg-center shadow-sm overflow-hidden relative"
+                            style='background-image: url("images/minimalist_texture.png");'>
+                            <div
+                                class="absolute inset-0 bg-black/10 group-hover:bg-black/25 transition-colors duration-300">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-text-primary text-lg font-bold">Minimalist Textures</p>
+                            <p class="text-text-secondary text-xs font-medium">Soft &amp; Subtle</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- Card 2 - Botanical Bliss -->
+                <a href="catalog.html" class="flex-none w-64 md:w-72 snap-center">
+                    <div class="flex flex-col gap-3 group cursor-pointer">
+                        <div class="w-full h-80 rounded-xl bg-cover bg-center shadow-sm overflow-hidden relative"
+                            style='background-image: url("images/botanical_bliss.png");'>
+                            <div
+                                class="absolute inset-0 bg-black/10 group-hover:bg-black/25 transition-colors duration-300">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-text-primary text-lg font-bold">Botanical Bliss</p>
+                            <p class="text-text-secondary text-xs font-medium">Nature Inspired</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- Card 3 - Geometric Dark -->
+                <a href="details.html" class="flex-none w-64 md:w-72 snap-center">
+                    <div class="flex flex-col gap-3 group cursor-pointer">
+                        <div class="w-full h-80 rounded-xl bg-cover bg-center shadow-sm overflow-hidden relative"
+                            style='background-image: url("images/emerald_geometric.png");'>
+                            <div
+                                class="absolute inset-0 bg-black/10 group-hover:bg-black/25 transition-colors duration-300">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-text-primary text-lg font-bold">Geometric Dark</p>
+                            <p class="text-text-secondary text-xs font-medium">Bold &amp; Modern</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- Card 4 - Midnight Rose -->
+                <a href="details.html" class="flex-none w-64 md:w-72 snap-center">
+                    <div class="flex flex-col gap-3 group cursor-pointer">
+                        <div class="w-full h-80 rounded-xl bg-cover bg-center shadow-sm overflow-hidden relative"
+                            style='background-image: url("images/midnight_rose.png");'>
+                            <div
+                                class="absolute inset-0 bg-black/10 group-hover:bg-black/25 transition-colors duration-300">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-text-primary text-lg font-bold">Midnight Rose</p>
+                            <p class="text-text-secondary text-xs font-medium">Rich &amp; Romantic</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Shop by Style -->
+            <h3
+                class="text-text-primary tracking-tight text-xl font-bold leading-tight px-4 pt-8 pb-4 fade-up fade-up-delay-3">
+                Shop by Style</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4 pb-8">
+                <a href="catalog.html"
+                    class="bg-white p-4 rounded-xl border border-neutral-light flex flex-col items-center justify-center gap-3 text-center h-40 hover:border-primary/50 hover:shadow-md transition-all cursor-pointer group">
+                    <div
+                        class="bg-neutral-light p-3 rounded-full text-text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                        <span class="material-symbols-outlined">brush</span>
+                    </div>
+                    <span class="text-text-primary font-semibold">Artistic</span>
+                </a>
+                <a href="catalog.html"
+                    class="bg-white p-4 rounded-xl border border-neutral-light flex flex-col items-center justify-center gap-3 text-center h-40 hover:border-primary/50 hover:shadow-md transition-all cursor-pointer group">
+                    <div
+                        class="bg-neutral-light p-3 rounded-full text-text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                        <span class="material-symbols-outlined">diamond</span>
+                    </div>
+                    <span class="text-text-primary font-semibold">Luxury</span>
+                </a>
+                <a href="catalog.html"
+                    class="bg-white p-4 rounded-xl border border-neutral-light flex flex-col items-center justify-center gap-3 text-center h-40 hover:border-primary/50 hover:shadow-md transition-all cursor-pointer group">
+                    <div
+                        class="bg-neutral-light p-3 rounded-full text-text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                        <span class="material-symbols-outlined">child_care</span>
+                    </div>
+                    <span class="text-text-primary font-semibold">Kids</span>
+                </a>
+                <a href="catalog.html"
+                    class="bg-white p-4 rounded-xl border border-neutral-light flex flex-col items-center justify-center gap-3 text-center h-40 hover:border-primary/50 hover:shadow-md transition-all cursor-pointer group">
+                    <div
+                        class="bg-neutral-light p-3 rounded-full text-text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                        <span class="material-symbols-outlined">format_paint</span>
+                    </div>
+                    <span class="text-text-primary font-semibold">Peel &amp; Stick</span>
+                </a>
+            </div>
+
+            <!-- Why Vivid Walls -->
+            <div class="px-4 py-8">
+                <h3 class="text-text-primary tracking-tight text-xl font-bold leading-tight mb-6">Why Vivid Walls?</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div
+                        class="bg-white rounded-xl p-5 border border-neutral-light flex items-start gap-4 hover:shadow-md transition-shadow">
+                        <div class="bg-primary/10 p-3 rounded-xl text-primary shrink-0">
+                            <span class="material-symbols-outlined">verified</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-text-primary mb-1">Premium Quality</p>
+                            <p class="text-text-secondary text-sm">Non-toxic, eco-friendly inks on premium non-woven
+                                substrate.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-xl p-5 border border-neutral-light flex items-start gap-4 hover:shadow-md transition-shadow">
+                        <div class="bg-primary/10 p-3 rounded-xl text-primary shrink-0">
+                            <span class="material-symbols-outlined">local_shipping</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-text-primary mb-1">Free Shipping</p>
+                            <p class="text-text-secondary text-sm">Complimentary delivery on orders over $150,
+                                nationwide.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-xl p-5 border border-neutral-light flex items-start gap-4 hover:shadow-md transition-shadow">
+                        <div class="bg-primary/10 p-3 rounded-xl text-primary shrink-0">
+                            <span class="material-symbols-outlined">style</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-text-primary mb-1">Free Samples</p>
+                            <p class="text-text-secondary text-sm">Order samples to see colors and textures in your own
+                                space.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div
+            class="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-neutral-light px-4 pb-6 pt-2 z-50">
+            <div class="flex justify-between items-end max-w-[1440px] mx-auto">
+                <a class="flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-text-primary"
+                    href="index.html" id="nav-home">
+                    <div class="flex h-8 items-center justify-center text-text-primary">
+                        <span class="material-symbols-outlined filled">home</span>
+                    </div>
+                    <p class="text-xs font-bold leading-normal tracking-[0.015em]">Home</p>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary hover:text-text-primary transition-colors"
+                    href="catalog.html" id="nav-shop">
+                    <div class="flex h-8 items-center justify-center">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                    </div>
+                    <p class="text-xs font-medium leading-normal tracking-[0.015em]">Shop</p>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary hover:text-text-primary transition-colors"
+                    href="catalog.html" id="nav-favorites">
+                    <div class="flex h-8 items-center justify-center">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </div>
+                    <p class="text-xs font-medium leading-normal tracking-[0.015em]">Favorites</p>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary hover:text-text-primary transition-colors"
+                    href="showroom.html" id="nav-profile">
+                    <div class="flex h-8 items-center justify-center">
+                        <span class="material-symbols-outlined">storefront</span>
+                    </div>
+                    <p class="text-xs font-medium leading-normal tracking-[0.015em]">Showroom</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

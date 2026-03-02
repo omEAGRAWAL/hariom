@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vivid Walls</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "primary": "#11d473", // Emerald Green as requested
+                "background-light": "#f6f8f7",
+                "background-dark": "#102219",
+                // Defining derived neutrals for harmony
+                "neutral-light": "#e8edeb",
+                "text-primary": "#111814",
+                "text-secondary": "#618975",
+                },
+                fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        .material-symbols-outlined.filled {
+          font-variation-settings:
+          'FILL' 1,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Bar -->
+<div class="flex flex-col gap-2 bg-white dark:bg-background-dark p-4 pb-2 sticky top-0 z-10 border-b border-neutral-light dark:border-white/10">
+<div class="flex items-center h-12 justify-between">
+<button class="text-text-primary dark:text-white flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-neutral-light dark:hover:bg-white/10">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-text-primary dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0 hover:bg-neutral-light dark:hover:bg-white/10 rounded-full w-12">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+<p class="text-text-primary dark:text-white tracking-tight text-[28px] font-extrabold leading-tight">Vivid Walls</p>
+</div>
+<!-- Main Content -->
+<div class="flex-1 pb-24"> <!-- Padding bottom for navigation bar -->
+<!-- Hero Section -->
+<div class="@container">
+<div class="@[480px]:px-4 @[480px]:py-3 p-4">
+<div class="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-white dark:bg-gray-800 rounded-xl min-h-[400px] shadow-sm relative group" data-alt="Luxurious living room with emerald green wallpaper" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRLxO5cIwIEwpHjdZ5yNpuGsZCGbSbC2gNzwgWMefHb07megiM_bv5_Laydfs4mKS0pNz8RuLlivK4hAMPOCf0WqWBkXUUMGWEs_cN03D-hiGa0SbeDHCpqNFdyLQ5V8igY-uAVRICZs7Vzen73W7iIllWP7NRvbjig8Za-ah_BGj3Fmh5lmAgeZOeH9tyRnmXz0dL6If0WN4BoHVkNAtqVaqFViAKzVMDrbiUOEJSdnPFFLzdtjrdX9H8pJ1Wt8E3-aMSrgxxhZE");'>
+<div class="flex flex-col p-6 gap-4 z-10">
+<h1 class="text-white tracking-tight text-4xl font-bold leading-tight drop-shadow-md">Transform Your Space</h1>
+<p class="text-white/90 text-sm font-medium leading-relaxed max-w-[80%]">Discover our curated selection of premium wallpapers designed to elevate your home.</p>
+<div class="pt-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-primary hover:bg-green-400 text-text-primary text-base font-bold leading-normal tracking-[0.015em] shadow-lg transition-colors">
+<span class="truncate">Browse Collection</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Collections Header -->
+<div class="flex items-center justify-between px-4 pt-6 pb-4">
+<h3 class="text-text-primary dark:text-white tracking-tight text-xl font-bold leading-tight">Featured Collections</h3>
+<a class="text-primary text-sm font-semibold hover:underline" href="#">See All</a>
+</div>
+<!-- Horizontal Scroll Container -->
+<div class="flex overflow-x-auto gap-4 px-4 pb-4 snap-x hide-scrollbar">
+<!-- Card 1 -->
+<div class="flex-none w-64 snap-center">
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full h-80 rounded-xl bg-cover bg-center shadow-sm overflow-hidden relative" data-alt="Modern minimalist bedroom with textured wallpaper" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBb8sddItOWgKDxax0_csE5crn4osQNwxQOHCw9ol-alt7Blv3rylfZpuoiDcoJYfSRgD8Wc3dE_r8_tduYBpsugQlYwVKo2ni-ysMvVmc-dYjpsZiuLoboyufusqI7q7JbLV0uyRbLU_EzP_lQnLTaj0Aok9_VXaHGMOg9qOGI97bSC_MGuV0C1j9wlIh3RcLoW8SF-t0UIdr_V44Emi7zmnusU8SZjL9H6Ix_Btn0ojpUIL5xWFws0Xz7-ULE7X_TIJj5b6mFJwQ");'>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors"></div>
+</div>
+<div>
+<p class="text-text-primary dark:text-white text-lg font-bold">Minimalist Textures</p>
+<p class="text-text-secondary dark:text-gray-400 text-xs font-medium">Soft &amp; Subtle</p>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex-none w-64 snap-center">
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full h-80 rounded-xl bg-cover bg-center shadow-sm overflow-hidden relative" data-alt="Floral wallpaper in a bright dining room" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDd-OLp85ZSTSNScL1qgLkU-KItP9P3zxdT3JqFG1-BhuJRG7FVXUPvwSYN2XgLogxV_V3j4KSKVeU1VokBVRH9O-vCnIP3QhAKPUQR6UIN_VCTDPAvp7WxeLpQB_SJtPpZKg7wxatBBgkptWHGg3I3B7dV6hpFi5z_ma3l9wFYSbOVh4GTlhBoHGh7Fqo8hvmoDZa8xSwe6NycBWMoQZXzdfRJfMmjd5YOPRrHluKrSIdrYVpNIi-mqh3JI-motTVc3vDLe6gMcL0");'>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors"></div>
+</div>
+<div>
+<p class="text-text-primary dark:text-white text-lg font-bold">Botanical Bliss</p>
+<p class="text-text-secondary dark:text-gray-400 text-xs font-medium">Nature Inspired</p>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex-none w-64 snap-center">
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="w-full h-80 rounded-xl bg-cover bg-center shadow-sm overflow-hidden relative" data-alt="Geometric dark wallpaper pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDVpMyxbeF44EzDo7BSk1-giyoJn2gMRbCYHYbgbzMmhCxQXQlt4QStM70aLCMed9hABmpYGgVHZ9Yt4UZt__HiBaysGMP4oAlkl990IvIcCB0gnBLdrV8SbAkIkEASSy_q1XX04zF5tiN8JehWEGAwG8if8mxrGQ48Z0F2kSrIkXs3V9NIIXoWrKRuTv968L2YzSH4zxhcVq371262uEQOjRyA4K6ePn7rgeklEo_CdHpygnFtN6v3M-CUymJ_mI4XgjSzIqKqpSQ");'>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors"></div>
+</div>
+<div>
+<p class="text-text-primary dark:text-white text-lg font-bold">Geometric Dark</p>
+<p class="text-text-secondary dark:text-gray-400 text-xs font-medium">Bold &amp; Modern</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Categories Grid -->
+<h3 class="text-text-primary dark:text-white tracking-tight text-xl font-bold leading-tight px-4 pt-6 pb-4">Shop by Style</h3>
+<div class="grid grid-cols-2 gap-4 px-4 pb-8">
+<div class="bg-white dark:bg-white/5 p-4 rounded-xl border border-neutral-light dark:border-white/10 flex flex-col items-center justify-center gap-3 text-center h-40 hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="bg-neutral-light dark:bg-white/10 p-3 rounded-full text-text-primary dark:text-white group-hover:bg-primary group-hover:text-black transition-colors">
+<span class="material-symbols-outlined">brush</span>
+</div>
+<span class="text-text-primary dark:text-white font-semibold">Artistic</span>
+</div>
+<div class="bg-white dark:bg-white/5 p-4 rounded-xl border border-neutral-light dark:border-white/10 flex flex-col items-center justify-center gap-3 text-center h-40 hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="bg-neutral-light dark:bg-white/10 p-3 rounded-full text-text-primary dark:text-white group-hover:bg-primary group-hover:text-black transition-colors">
+<span class="material-symbols-outlined">diamond</span>
+</div>
+<span class="text-text-primary dark:text-white font-semibold">Luxury</span>
+</div>
+<div class="bg-white dark:bg-white/5 p-4 rounded-xl border border-neutral-light dark:border-white/10 flex flex-col items-center justify-center gap-3 text-center h-40 hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="bg-neutral-light dark:bg-white/10 p-3 rounded-full text-text-primary dark:text-white group-hover:bg-primary group-hover:text-black transition-colors">
+<span class="material-symbols-outlined">child_care</span>
+</div>
+<span class="text-text-primary dark:text-white font-semibold">Kids</span>
+</div>
+<div class="bg-white dark:bg-white/5 p-4 rounded-xl border border-neutral-light dark:border-white/10 flex flex-col items-center justify-center gap-3 text-center h-40 hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="bg-neutral-light dark:bg-white/10 p-3 rounded-full text-text-primary dark:text-white group-hover:bg-primary group-hover:text-black transition-colors">
+<span class="material-symbols-outlined">format_paint</span>
+</div>
+<span class="text-text-primary dark:text-white font-semibold">Peel &amp; Stick</span>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 left-0 w-full bg-white dark:bg-background-dark border-t border-neutral-light dark:border-white/10 px-4 pb-6 pt-2 z-50">
+<div class="flex justify-between items-end">
+<!-- Home (Active) -->
+<a class="flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-text-primary dark:text-white" href="#">
+<div class="flex h-8 items-center justify-center text-text-primary dark:text-white">
+<span class="material-symbols-outlined filled">home</span>
+</div>
+<p class="text-xs font-bold leading-normal tracking-[0.015em]">Home</p>
+</a>
+<!-- Shop -->
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary dark:text-gray-400 hover:text-text-primary dark:hover:text-white transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">shopping_bag</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Shop</p>
+</a>
+<!-- Favorites -->
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary dark:text-gray-400 hover:text-text-primary dark:hover:text-white transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Favorites</p>
+</a>
+<!-- Profile -->
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary dark:text-gray-400 hover:text-text-primary dark:hover:text-white transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined">account_circle</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Profile</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

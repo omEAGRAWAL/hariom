@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Vivid Walls — Wallpaper Catalog</title>
+    <meta name="description"
+        content="Browse our complete collection of premium wallpapers. Filter by style, pattern, and price.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d473",
+                        "primary-dark": "#0eba63",
+                        "bg-light": "#f6f8f7",
+                        "bg-dark": "#102219",
+                        "neutral-light": "#e8edeb",
+                        "text-primary": "#111814",
+                        "text-secondary": "#618975",
+                    },
+                    fontFamily: { "display": ["Manrope", "sans-serif"] },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        body {
+            min-height: 100dvh;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.4s ease-out forwards;
+        }
+
+        .filter-chip {
+            transition: all 0.2s ease;
+        }
+
+        .filter-chip.active {
+            background: #111814;
+            color: white;
+        }
+
+        .product-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+
+<body class="bg-bg-light font-display antialiased">
+    <div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-[1440px] mx-auto">
+
+        <!-- Header -->
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between bg-white/90 backdrop-blur-md p-4 border-b border-neutral-light">
+            <a href="index.html"
+                class="flex size-10 items-center justify-center rounded-full bg-neutral-light hover:bg-neutral-light/80 text-text-primary transition-colors">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </a>
+            <h1 class="text-lg font-bold tracking-tight text-text-primary">Catalog</h1>
+            <div class="flex gap-1">
+                <button
+                    class="flex size-10 items-center justify-center rounded-full hover:bg-neutral-light text-text-primary transition-colors">
+                    <span class="material-symbols-outlined">tune</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 pb-24">
+
+            <!-- Search Bar -->
+            <div class="px-4 pt-4">
+                <div class="relative">
+                    <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary text-xl">search</span>
+                    <input type="text" placeholder="Search textures, colors..."
+                        class="w-full h-12 pl-10 pr-4 rounded-xl bg-white border border-neutral-light text-text-primary text-sm font-medium placeholder:text-text-secondary/60 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+                        id="search-input" />
+                </div>
+            </div>
+
+            <!-- Filter Chips -->
+            <div class="flex gap-2 px-4 py-4 overflow-x-auto hide-scrollbar">
+                <button
+                    class="filter-chip active flex items-center gap-1 h-9 px-4 rounded-full text-sm font-semibold border border-neutral-light shrink-0"
+                    onclick="activateFilter(this)">All</button>
+                <button
+                    class="filter-chip flex items-center gap-1 h-9 px-4 rounded-full text-sm font-semibold bg-white border border-neutral-light text-text-primary shrink-0 hover:bg-neutral-light"
+                    onclick="activateFilter(this)">
+                    Floral <span class="material-symbols-outlined text-sm">expand_more</span>
+                </button>
+                <button
+                    class="filter-chip flex items-center gap-1 h-9 px-4 rounded-full text-sm font-semibold bg-white border border-neutral-light text-text-primary shrink-0 hover:bg-neutral-light"
+                    onclick="activateFilter(this)">
+                    Geometric <span class="material-symbols-outlined text-sm">expand_more</span>
+                </button>
+                <button
+                    class="filter-chip flex items-center gap-1 h-9 px-4 rounded-full text-sm font-semibold bg-white border border-neutral-light text-text-primary shrink-0 hover:bg-neutral-light"
+                    onclick="activateFilter(this)">
+                    Textured <span class="material-symbols-outlined text-sm">expand_more</span>
+                </button>
+                <button
+                    class="filter-chip flex items-center gap-1 h-9 px-4 rounded-full text-sm font-semibold bg-white border border-neutral-light text-text-primary shrink-0 hover:bg-neutral-light"
+                    onclick="activateFilter(this)">
+                    Abstract <span class="material-symbols-outlined text-sm">expand_more</span>
+                </button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4" id="product-grid">
+
+                <!-- Product 1: Emerald Garden -->
+                <a href="details.html"
+                    class="product-card flex flex-col gap-3 bg-white rounded-xl overflow-hidden border border-neutral-light fade-up">
+                    <div class="relative aspect-square bg-cover bg-center"
+                        style='background-image: url("images/emerald_geometric.png");'>
+                        <button
+                            class="absolute top-2 right-2 size-8 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-text-secondary hover:text-red-500 transition-colors shadow-sm"
+                            onclick="event.preventDefault(); toggleHeart(this)">
+                            <span class="material-symbols-outlined text-lg">favorite</span>
+                        </button>
+                        <div
+                            class="absolute bottom-2 left-2 bg-primary/90 text-text-primary text-[10px] font-bold px-2 py-0.5 rounded-full">
+                            NEW</div>
+                    </div>
+                    <div class="px-3 pb-3">
+                        <p class="text-text-primary font-bold text-sm">Emerald Garden</p>
+                        <p class="text-primary font-bold text-sm">$99 <span
+                                class="text-text-secondary font-normal text-xs">/roll</span></p>
+                    </div>
+                </a>
+
+                <!-- Product 2: Golden Damask -->
+                <a href="details.html"
+                    class="product-card flex flex-col gap-3 bg-white rounded-xl overflow-hidden border border-neutral-light fade-up"
+                    style="animation-delay:0.05s">
+                    <div class="relative aspect-square bg-cover bg-center"
+                        style='background-image: url("images/golden_damask.png");'>
+                        <button
+                            class="absolute top-2 right-2 size-8 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-red-500 transition-colors shadow-sm"
+                            onclick="event.preventDefault(); toggleHeart(this)">
+                            <span class="material-symbols-outlined text-lg filled">favorite</span>
+                        </button>
+                    </div>
+                    <div class="px-3 pb-3">
+                        <p class="text-text-primary font-bold text-sm">Golden Damask</p>
+                        <p class="text-primary font-bold text-sm">$120 <span
+                                class="text-text-secondary font-normal text-xs">/roll</span></p>
+                    </div>
+                </a>
+
+                <!-- Product 3: Midnight Rose -->
+                <a href="details.html"
+                    class="product-card flex flex-col gap-3 bg-white rounded-xl overflow-hidden border border-neutral-light fade-up"
+                    style="animation-delay:0.1s">
+                    <div class="relative aspect-square bg-cover bg-center"
+                        style='background-image: url("images/midnight_rose.png");'>
+                        <button
+                            class="absolute top-2 right-2 size-8 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-text-secondary hover:text-red-500 transition-colors shadow-sm"
+                            onclick="event.preventDefault(); toggleHeart(this)">
+                            <span class="material-symbols-outlined text-lg">favorite</span>
+                        </button>
+                    </div>
+                    <div class="px-3 pb-3">
+                        <p class="text-text-primary font-bold text-sm">Midnight Rose</p>
+                        <p class="text-primary font-bold text-sm">$95 <span
+                                class="text-text-secondary font-normal text-xs">/roll</span></p>
+                    </div>
+                </a>
+
+                <!-- Product 4: Botanical Bliss -->
+                <a href="details.html"
+                    class="product-card flex flex-col gap-3 bg-white rounded-xl overflow-hidden border border-neutral-light fade-up"
+                    style="animation-delay:0.15s">
+                    <div class="relative aspect-square bg-cover bg-center"
+                        style='background-image: url("images/botanical_bliss.png");'>
+                        <button
+                            class="absolute top-2 right-2 size-8 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-text-secondary hover:text-red-500 transition-colors shadow-sm"
+                            onclick="event.preventDefault(); toggleHeart(this)">
+                            <span class="material-symbols-outlined text-lg">favorite</span>
+                        </button>
+                        <div
+                            class="absolute bottom-2 left-2 bg-yellow-400/90 text-text-primary text-[10px] font-bold px-2 py-0.5 rounded-full">
+                            BESTSELLER</div>
+                    </div>
+                    <div class="px-3 pb-3">
+                        <p class="text-text-primary font-bold text-sm">Botanical Bliss</p>
+                        <p class="text-primary font-bold text-sm">$110 <span
+                                class="text-text-secondary font-normal text-xs">/roll</span></p>
+                    </div>
+                </a>
+
+                <!-- Product 5: Minimalist Texture -->
+                <a href="details.html"
+                    class="product-card flex flex-col gap-3 bg-white rounded-xl overflow-hidden border border-neutral-light fade-up"
+                    style="animation-delay:0.2s">
+                    <div class="relative aspect-square bg-cover bg-center"
+                        style='background-image: url("images/minimalist_texture.png");'>
+                        <button
+                            class="absolute top-2 right-2 size-8 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-text-secondary hover:text-red-500 transition-colors shadow-sm"
+                            onclick="event.preventDefault(); toggleHeart(this)">
+                            <span class="material-symbols-outlined text-lg">favorite</span>
+                        </button>
+                    </div>
+                    <div class="px-3 pb-3">
+                        <p class="text-text-primary font-bold text-sm">Minimalist Linen</p>
+                        <p class="text-primary font-bold text-sm">$85 <span
+                                class="text-text-secondary font-normal text-xs">/roll</span></p>
+                    </div>
+                </a>
+
+                <!-- Product 6: Artistic Stroke -->
+                <a href="details.html"
+                    class="product-card flex flex-col gap-3 bg-white rounded-xl overflow-hidden border border-neutral-light fade-up"
+                    style="animation-delay:0.25s">
+                    <div class="relative aspect-square bg-cover bg-center"
+                        style='background-image: url("images/artistic_stroke.png");'>
+                        <button
+                            class="absolute top-2 right-2 size-8 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-text-secondary hover:text-red-500 transition-colors shadow-sm"
+                            onclick="event.preventDefault(); toggleHeart(this)">
+                            <span class="material-symbols-outlined text-lg">favorite</span>
+                        </button>
+                        <div
+                            class="absolute bottom-2 left-2 bg-white/90 text-text-primary text-[10px] font-bold px-2 py-0.5 rounded-full">
+                            SALE -20%</div>
+                    </div>
+                    <div class="px-3 pb-3">
+                        <p class="text-text-primary font-bold text-sm">Artistic Stroke</p>
+                        <p class="text-primary font-bold text-sm">$135 <span
+                                class="text-text-secondary font-normal text-xs line-through">$168</span></p>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Results count -->
+            <p class="text-center text-text-secondary text-xs py-6">Showing 6 of 48 wallpapers</p>
+
+            <!-- Load More -->
+            <div class="flex justify-center pb-8">
+                <button
+                    class="h-12 px-8 rounded-full border-2 border-primary text-primary font-bold text-sm hover:bg-primary hover:text-text-primary transition-all">
+                    Load More
+                </button>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <div
+            class="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-neutral-light px-4 pb-6 pt-2 z-50">
+            <div class="flex justify-between items-end max-w-[1440px] mx-auto">
+                <a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary hover:text-text-primary transition-colors"
+                    href="index.html">
+                    <div class="flex h-8 items-center justify-center">
+                        <span class="material-symbols-outlined">home</span>
+                    </div>
+                    <p class="text-xs font-medium leading-normal tracking-[0.015em]">Home</p>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-text-primary"
+                    href="catalog.html">
+                    <div class="flex h-8 items-center justify-center text-text-primary">
+                        <span class="material-symbols-outlined filled">shopping_bag</span>
+                    </div>
+                    <p class="text-xs font-bold leading-normal tracking-[0.015em]">Shop</p>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary hover:text-text-primary transition-colors"
+                    href="catalog.html">
+                    <div class="flex h-8 items-center justify-center">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </div>
+                    <p class="text-xs font-medium leading-normal tracking-[0.015em]">Favorites</p>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary hover:text-text-primary transition-colors"
+                    href="showroom.html">
+                    <div class="flex h-8 items-center justify-center">
+                        <span class="material-symbols-outlined">storefront</span>
+                    </div>
+                    <p class="text-xs font-medium leading-normal tracking-[0.015em]">Showroom</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function activateFilter(el) {
+            document.querySelectorAll('.filter-chip').forEach(c => {
+                c.classList.remove('active');
+                c.classList.add('bg-white', 'text-text-primary');
+            });
+            el.classList.add('active');
+            el.classList.remove('bg-white', 'text-text-primary');
+        }
+
+        function toggleHeart(btn) {
+            const icon = btn.querySelector('.material-symbols-outlined');
+            if (icon.classList.contains('filled')) {
+                icon.classList.remove('filled');
+                btn.classList.remove('text-red-500');
+                btn.classList.add('text-text-secondary');
+            } else {
+                icon.classList.add('filled');
+                btn.classList.add('text-red-500');
+                btn.classList.remove('text-text-secondary');
+            }
+        }
+
+        // Simple search filter
+        document.getElementById('search-input').addEventListener('input', function (e) {
+            const q = e.target.value.toLowerCase();
+            document.querySelectorAll('#product-grid > a').forEach(card => {
+                const name = card.querySelector('.text-text-primary.font-bold').textContent.toLowerCase();
+                card.style.display = name.includes(q) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>
